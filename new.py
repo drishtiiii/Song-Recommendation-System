@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-print("."*22)
-print("\t","\t","\t","\t","\t","Warm Greetings")
+print("..."*120)
+print("\t","\t","\t","\t","\t","\t","\t","Greetings")
 
 def top10dance():
     #Top 10 songs danceability with artist names 
@@ -16,9 +16,9 @@ def top10dance():
     plt.show()
 
 def  peak_rank():
-    #Drake songs peak rank
+    #songs peak rank
     df=pd.read_csv("audio1.csv", usecols=["artist_names","spotify_track_popularity","track_name"])
-    df=df[df["artist_names"]=="Drake"]
+    df=df[df["artist_names"]=="Taylor Swift"]
     print(df)
     plt.xlabel("track_name")
     plt.ylabel("spotify_track_popularity")
@@ -38,14 +38,14 @@ def songs_played():
     plt.show()
       
 while True:
-    print("."*22)
-    print("\t","\t","\t","\t","\t","MENU")
+    print("..."*120)
+    print("\t","\t","\t","\t","\t","\t","\t","MENU")
     print("1. Top 10 songs you can groove on ")
     print("2. Get to know artist peak rank")
-    print("3. Top 10 songs played")
-    print("."*222)
-    a=input("Enter your Name")
-    ch=int(input("Enter your choice"))
+    print("3. Top 10 favourite long songs played")
+    print("..."*120)
+    a=input("Enter your Name ")
+    ch=int(input("Enter your choice "))
     if ch==1:
         print("THANK YOU" , a)
         top10dance()
